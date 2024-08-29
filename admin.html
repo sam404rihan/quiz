@@ -3,22 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Indian Tradition Quiz</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Indian Tradition Quiz - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
 </head>
 <body>
 <header>
-    <h1>Admin - Indian Tradition Quiz</h1>
+    <h1>Indian Tradition Quiz</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#teams">Teams</a></li>
+        </ul>
+    </nav>
 </header>
 <main>
-    <section id="admin">
-        <h2>Manage Teams</h2>
+    <section id="home">
+        <h2>Welcome to the Indian Tradition Quiz</h2>
+        <p>Test your knowledge about the rich traditions of India.</p>
+    </section>
+    <section id="login">
+        <h2>Team Leader Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+    <section id="teams">
+        <h2>Teams</h2>
         <div id="teamList"></div>
     </section>
 </main>
-<footer>
-    <p>Contact us at: info@indiantraditionquiz.com</p>
-</footer>
-<script src="admin.js"></script>
+
+<script src="scripts.js"></script>
 </body>
 </html>
