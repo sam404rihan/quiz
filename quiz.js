@@ -28,7 +28,7 @@ function displayQuestion() {
             <ul>
                 ${question.options.map(option => `<li><button onclick="selectAnswer('${option}')">${option}</button></li>`).join('')}
             </ul>
-            <button id="nextButton" onclick="nextQuestion()">Next</button>
+            <button id="nextButton" onclick="nextQuestion()" style="display:none;">Next</button>
         `;
         updateProgressBar();
     } else {
