@@ -13,7 +13,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Check for admin login
     if (username === adminUsername && password === adminPassword) {
         alert('Admin logged in successfully!');
-        window.location.href = 'admin.html';
+        window.location.href = 'add/admin.html';
         return;
     }
 
@@ -28,7 +28,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         localStorage.setItem('currentTeam', username);
         displayTeams();
         alert('Team leader logged in successfully!');
-        window.location.href = 'quiz.html';
+        window.location.href = 'add/quiz.html';
     } else {
         alert('Maximum number of teams reached.');
     }
