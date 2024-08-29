@@ -9,7 +9,7 @@ function displayTeams() {
         teamDiv.innerHTML = `
             <h3>Team ${index + 1}</h3>
             <p>Leader: ${team.username}</p>
-            <p>Score: ${team.score !== undefined ? team.score : 'Not available'}</p>
+            <p>Score: ${team.score !== null ? team.score : 'Not available'}</p>
             <button onclick="deleteTeam(${index})">Delete Team</button>
             <button onclick="updateScore(${index})">Update Score</button>
         `;
