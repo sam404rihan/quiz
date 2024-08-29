@@ -21,7 +21,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     if (teams.length < maxTeams) {
         const team = {
             username: username,
-            password: password
+            password: password,
+            score: null
         };
         teams.push(team);
         localStorage.setItem('teams', JSON.stringify(teams));
